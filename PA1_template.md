@@ -152,7 +152,7 @@ hist(activity.total.steps$steps.total, col = "red", xlab = "Total Steps", main =
     ylim = c(0, 35))
 ```
 
-![plot of chunk PLot_New_and_Old_Histogram](figure/PLot_New_and_Old_Histogram-1.png) 
+![plot of chunk Plot_New_and_Old_Histogram](figure/Plot_New_and_Old_Histogram-1.png) 
 
 ```r
 par(mfrow = c(1, 1))

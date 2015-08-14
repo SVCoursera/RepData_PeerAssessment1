@@ -126,7 +126,7 @@ activity.total.steps.na.fixed <-activity.fixed %>% group_by(date) %>% summarise(
 ```
 
 and shown as  
-```{r PLot_New_and_Old_Histogram, tidy=TRUE}
+```{r Plot_New_and_Old_Histogram, tidy=TRUE}
 par(mfrow = c(1, 2))
 hist(activity.total.steps.na.fixed$steps.total, 
 	        col="red", xlab="Total Steps", main="Fixed Values", ylim=c(0,35))
