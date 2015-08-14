@@ -2,7 +2,9 @@
 title: "Reproducible Research Assessment 1"
 author: "Sam Vella"
 date: "Thursday, August 13, 2015"
-output: html_document
+output:
+  html_document:
+    keep_md: yes
 ---
 
 
@@ -49,7 +51,7 @@ Now a histogram can be generated showing the spread of mean values
 hist(activity.total.steps$steps.total, col = "red", xlab = "Total Steps", main = "Total Steps Per Day")
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
+![plot of chunk Histogram_of_Total_Steps_per_Day](figure/Histogram_of_Total_Steps_per_Day-1.png) 
 
 ###3. Calculate and report the mean and median of the total number of steps taken per day 
 The mean and median are calculated with the following code:  
@@ -82,7 +84,7 @@ plot(activity.interval.steps$interval, activity.interval.steps$steps.average,
     ylab = "Average Steps")
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
+![plot of chunk Plot_Activity_by_Interval](figure/Plot_Activity_by_Interval-1.png) 
 
 ###2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?  
 To find which 5 minute interval has the maximum average number of steps
@@ -150,7 +152,7 @@ hist(activity.total.steps$steps.total, col = "red", xlab = "Total Steps", main =
     ylim = c(0, 35))
 ```
 
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
+![plot of chunk PLot_New_and_Old_Histogram](figure/PLot_New_and_Old_Histogram-1.png) 
 
 ```r
 par(mfrow = c(1, 1))
@@ -208,4 +210,4 @@ xyplot(steps.average ~ interval | weekday, data = activity.interval.steps.na.fix
     layout = c(1, 2), type = "l", xlab = "Interval", ylab = "Number of Steps")
 ```
 
-![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17-1.png) 
+![plot of chunk Plot_Weekday_vs_Weekend](figure/Plot_Weekday_vs_Weekend-1.png) 
