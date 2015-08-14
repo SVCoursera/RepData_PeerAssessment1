@@ -46,7 +46,7 @@ activity.total.steps<-activity %>%  group_by(date) %>%  summarise(steps.total=su
 ###2. Make a histogram of the total number of steps taken each day  
 Now a histogram can be generated showing the spread of mean values  
 ```{r Histogram_of_Total_Steps_per_Day, tidy=TRUE}
-hist(activity.total.steps$steps.total, 
+hist(activity.total.steps$steps.total, ylim=c(0,35), 
      col="red", xlab="Total Steps", main="Total Steps Per Day")
 ```
 
