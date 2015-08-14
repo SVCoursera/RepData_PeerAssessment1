@@ -64,7 +64,7 @@ activity.mean.median <- activity.total.steps %>% summarise(steps.mean = mean(ste
 ```
 
 Which results in:  
-Mean = 10766.1886792  
+Mean = 10766.19  
 Median = 10765
 
 
@@ -170,10 +170,10 @@ activity.fixed.na.mean.median <- activity.total.steps.na.fixed %>% summarise(ste
 ```
 
 
-Mean = 10766.1886792  
-Median = 10766.1886792  
+Mean = 10766.19  
+Median = 10766.19  
 compared to the old values of  
-Mean = 10766.1886792  
+Mean = 10766.19  
 Median = 10765  
   
 So although the distribution of values has clearly changed slightly, the mean and median are the same. Mathematically this shouldn't be a suprise given that the average number of steps per interval was used to imput the missing values.  
@@ -181,8 +181,8 @@ So although the distribution of values has clearly changed slightly, the mean an
 
 A good test here would be to have a look at the standard deviation, we'd expect it to decrease to reflect the reduced spread of the fixed dataset
   
-Old SD = 4269.1804927  
-New SD = 3974.390746
+Old Standard Deviation = 4269.18  
+New Standard Deviation = 3974.39
 
 
 ##Are there differences in activity patterns between weekdays and weekends?  

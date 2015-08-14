@@ -57,8 +57,8 @@ activity.mean.median<-activity.total.steps %>% summarise(steps.mean = mean(steps
 ```
 
 Which results in:  
-Mean = `r activity.mean.median$steps.mean `  
-Median = `r activity.mean.median$steps.median `
+Mean = `r format(activity.mean.median$steps.mean, digits=2, nsmall=2) `  
+Median = `r format(activity.mean.median$steps.median, digits=2, nsmall=2) `
 
 
 ##What is the average daily activity pattern
@@ -82,7 +82,7 @@ activity.max.average.steps<-activity.interval.steps %>% summarise(steps.average.
 activity.interval.max <- activity.interval.steps %>% filter(steps.average == activity.max.average.steps$steps.average.max)
 ```
 Which results in:  
-Interval Number `r activity.interval.max$interval `  
+Interval Number `r format(activity.interval.max$interval, digits=2, nsmall=2) `  
 
 
 ## Imputting missing values
@@ -92,7 +92,7 @@ Interval Number `r activity.interval.max$interval `
 activity.na.count <- activity %>% filter(is.na(steps)) %>% summarise(count=n())
 ```
   
-Number of NAs `r activity.na.count$count `    
+Number of NAs `r format(activity.na.count$count, digits=2, nsmall=2) `    
   
 ###2. Devise a strategy for filling in all of the missing values in the dataset    
 The strategy I've used is similar to that suggested in the course material, i.e. calculate the averages for all the intervals 
@@ -144,19 +144,19 @@ activity.fixed.na.mean.median<-activity.total.steps.na.fixed %>% summarise(steps
 ```
 
 
-Mean = `r activity.fixed.na.mean.median$steps.mean `  
-Median = `r activity.fixed.na.mean.median$steps.median `  
+Mean = `r format(activity.fixed.na.mean.median$steps.mean, digits=2, nsmall=2) `  
+Median = `r format(activity.fixed.na.mean.median$steps.median, digits=2, nsmall=2) `  
 compared to the old values of  
-Mean = `r activity.mean.median$steps.mean `  
-Median = `r activity.mean.median$steps.median `  
+Mean = `r format(activity.mean.median$steps.mean, digits=2, nsmall=2) `  
+Median = `r format(activity.mean.median$steps.median, digits=2, nsmall=2) `  
   
 So although the distribution of values has clearly changed slightly, the mean and median are the same. Mathematically this shouldn't be a suprise given that the average number of steps per interval was used to imput the missing values.  
 *If you take a set of numbers, calculate the average, add the average number as a new value in the set then calculate the average again, you will get the answer as before*
 
 A good test here would be to have a look at the standard deviation, we'd expect it to decrease to reflect the reduced spread of the fixed dataset
   
-Old SD = `r activity.mean.median$steps.sd `  
-New SD = `r activity.fixed.na.mean.median$steps.sd `
+Old Standard Deviation = `r format(activity.mean.median$steps.sd, digits=2, nsmall=2) `  
+New Standard Deviation = `r format(activity.fixed.na.mean.median$steps.sd, digits=2, nsmall=2) `
 
 
 ##Are there differences in activity patterns between weekdays and weekends?  

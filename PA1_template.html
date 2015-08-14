@@ -252,7 +252,7 @@ The mean and median are calculated with the following code:  </p>
 </code></pre>
 
 <p>Which results in:<br/>
-Mean = 10766.1886792<br/>
+Mean = 10766.19<br/>
 Median = 10765</p>
 
 <p>##What is the average daily activity pattern
@@ -346,10 +346,10 @@ hist(activity.total.steps$steps.total, col = &quot;red&quot;, xlab = &quot;Total
     na.rm = TRUE))
 </code></pre>
 
-<p>Mean = 10766.1886792<br/>
-Median = 10766.1886792<br/>
+<p>Mean = 10766.19<br/>
+Median = 10766.19<br/>
 compared to the old values of<br/>
-Mean = 10766.1886792<br/>
+Mean = 10766.19<br/>
 Median = 10765  </p>
 
 <p>So although the distribution of values has clearly changed slightly, the mean and median are the same. Mathematically this shouldn&#39;t be a suprise given that the average number of steps per interval was used to imput the missing values.<br/>
@@ -357,8 +357,8 @@ Median = 10765  </p>
 
 <p>A good test here would be to have a look at the standard deviation, we&#39;d expect it to decrease to reflect the reduced spread of the fixed dataset</p>
 
-<p>Old SD = 4269.1804927<br/>
-New SD = 3974.390746</p>
+<p>Old Standard Deviation = 4269.18<br/>
+New Standard Deviation = 3974.39</p>
 
 <p>##Are there differences in activity patterns between weekdays and weekends?<br/>
 ###1. Create a new factor variable in the dataset with two levels - &ldquo;weekday&rdquo; and &ldquo;weekend&rdquo; indicating whether a given date is a weekday or weekend day.<br/>
